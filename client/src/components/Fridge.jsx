@@ -160,7 +160,7 @@ export default function Fridge() {
                   </p>
                 )}
 
-                {/* Edit Mode */}
+                {/* Actions */}
                 {editingItemId === item.id ? (
                   <>
                     <input
@@ -177,21 +177,21 @@ export default function Fridge() {
                     </button>
                   </>
                 ) : (
-                  <button
-                    className="mt-2 text-sm text-blue-600 hover:underline"
-                    onClick={() => handleEditClick(item.id, item.expires_on)}
-                  >
-                    ✏️ Edit  
-                  </button>
+                  <div className="flex space-x-4 mt-2">
+                    <button
+                      className="text-sm text-blue-600 hover:underline"
+                      onClick={() => handleEditClick(item.id, item.expires_on)}
+                    >
+                      ✏️ Edit
+                    </button>
+                    <button
+                      className="text-sm text-red-600 hover:underline"
+                      onClick={() => handleDeleteItem(item.id)}
+                    >
+                      🗑️ Delete
+                    </button>
+                  </div>
                 )}
-
-                {/* Delete */}
-                <button
-                  className="mt-1 text-sm text-red-600 hover:underline"
-                  onClick={() => handleDeleteItem(item.id)}
-                >
-                    🗑️ Delete
-                </button>
               </div>
             );
           })}
@@ -200,7 +200,7 @@ export default function Fridge() {
 
       {/* Add Item Form */}
       <div className="mt-8 p-4 bg-green-50 rounded-xl shadow">
-      <h3 className="text-lg font-semibold mb-2 text-emerald-700">Add New Item</h3>
+        <h3 className="text-lg font-semibold mb-2 text-emerald-700">Add New Item</h3>
         <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <input
             className="border p-2 rounded flex-1"
