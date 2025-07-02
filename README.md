@@ -15,7 +15,7 @@ Built with a modern tech stack featuring **React.js**, **Supabase PostgreSQL**, 
 
 ### 📊 Dynamic Dashboard with Real-time Inventory Management
 ![Dashboard](screenshots/ss2.png)
-![Dashboard](screenshots/ss3.png)
+![Dashboard](screenshots/ss4.png)
 
 **Advanced Features:** Real-time Supabase PostgreSQL integration with Row Level Security, expiration-based sorting algorithms, and AI-driven recipe matching engine. Implements responsive grid layouts with Tailwind CSS and optimized React state management for seamless user experience.
 
